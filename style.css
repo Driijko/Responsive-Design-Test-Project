@@ -1,0 +1,36 @@
+:root {
+    --main-width: min(100vw, calc(100vh * 0.666));
+}
+
+body {
+    margin: 0;
+    background-color: black;
+}
+
+#main-wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#main {
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    border: 5px solid white;
+    width: var(--main-width);
+    height: calc(var(--main-width) + calc(var(--main-width) * 0.5));
+}
+
+#test1 {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+
+    box-sizing: border-box;
+    width: 10%;
+    height: 6.6%;
+    border: 5px solid red;
+}
