@@ -14,7 +14,18 @@ body {
     display: flex;
     box-sizing: border-box;
     justify-content: center;
-    background-color: red;
+}
+
+#bkg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-image: url(./assets/visual/images/bkg.jpg);
+    background-position: 50% 50%;
+    background-size: calc(var(--w) * 5);
 }
 
 #column {
@@ -36,7 +47,7 @@ body {
     position: absolute;
     box-sizing: border-box;
     display: flex;
-    /* border: 3px solid red; */
+    border: 3px solid red;
 }
 
 h1, h2, p {
