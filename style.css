@@ -1,12 +1,14 @@
 :root {
     /* --double-width: calc(var(--main-width) * 2); */
     --w: min(100vw, calc(100vh * 0.666667));
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     background-color: black;
     color: white;
+    overflow: hidden;
 }
 
 #wrapper {
@@ -45,6 +47,7 @@ body {
 
     background-color: black;
     border-bottom: 1px dashed white;
+    border-top: 1px dashed white;
     width: var(--w);
     height: calc(var(--w) + calc(var(--w) * 0.5));
 }
@@ -56,7 +59,7 @@ body {
     /* border: 3px solid red; */
 }
 
-h1, h2, p {
+h1, h2, p, a {
     margin: auto;
 }
 
@@ -72,6 +75,21 @@ h2 {
 p {
     text-align: justify;
     font-size: calc(var(--w) / 20);
+}
+
+.next-page {
+    top: 93.33%;
+    left: 0%;
+    height: 6.66%;
+    width: 100%;
+    border: 1px solid white;
+}
+
+a {
+    display: inline-block;
+    color: white;
+    width: 100%;
+    text-align: center;
 }
 
 #page1 .box:nth-child(1) {
@@ -95,6 +113,14 @@ p {
     height: 53.33%;
 }
 
+#page1 .box:nth-child(4) {
+    top: 93.33%;
+    left: 0%;
+    height: 6.66%;
+    width: 100%;
+    border: 1px solid white;
+}
+
 #page2 .box:nth-child(1) {
     left: 10%;
     top: 6.66%;
@@ -110,6 +136,27 @@ p {
 }
 
 #page2 .box:nth-child(3) {
+    left: 10%;
+    top: 66.66%;
+    width: 80%;
+    height: 26.66%;
+}
+
+#page3 .box:nth-child(1) {
+    left: 10%;
+    top: 6.66%;
+    width: 80%;
+    height: 33.33%;
+}
+
+#page3 .box:nth-child(2) {
+    left: 20%;
+    top: 40%;
+    width: 60%;
+    height: 26.66%;
+}
+
+#page3 .box:nth-child(3) {
     left: 10%;
     top: 66.66%;
     width: 80%;
