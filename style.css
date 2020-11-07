@@ -1,5 +1,4 @@
 :root {
-    /* --main-width: min(100vw, calc(100vh * 0.666)); */
     /* --double-width: calc(var(--main-width) * 2); */
     --w: min(100vw, calc(100vh * 0.666667));
 }
@@ -31,14 +30,21 @@ body {
 #column {
     display: flex;
     flex-direction: column;
-    background-color: black;
+}
+
+.page-wrapper {
+    display: flex;
+    height: 100vh;
+    align-items: center;
 }
 
 .page {
     display: inline-block;
     box-sizing: border-box;
     position: relative;
-    border: 10px solid blue;
+
+    background-color: black;
+    border-bottom: 1px dashed white;
     width: var(--w);
     height: calc(var(--w) + calc(var(--w) * 0.5));
 }
@@ -47,7 +53,7 @@ body {
     position: absolute;
     box-sizing: border-box;
     display: flex;
-    border: 3px solid red;
+    /* border: 3px solid red; */
 }
 
 h1, h2, p {
