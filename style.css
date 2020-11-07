@@ -1,8 +1,11 @@
 :root {
-    /* --double-width: calc(var(--main-width) * 2); */
     --w: min(100vw, calc(100vh * 0.666667));
     scroll-behavior: smooth;
 }
+
+::-webkit-scrollbar {
+    display: none;
+} 
 
 body {
     margin: 0;
@@ -32,6 +35,9 @@ body {
 #column {
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 .page-wrapper {
@@ -41,7 +47,6 @@ body {
 }
 
 .page {
-    display: inline-block;
     box-sizing: border-box;
     position: relative;
 
@@ -72,10 +77,11 @@ h2 {
     font-size: calc(var(--w) / 16);
 }
 
-p {
+p, a {
     text-align: justify;
     font-size: calc(var(--w) / 20);
 }
+
 
 .next-page {
     top: 93.33%;
